@@ -1,27 +1,22 @@
 import subprocess
 import random
 
-# Adres defterine kayıtlar ekleyin Key = İsim, Value = Telefon Numarası
-addressbook = {"Name1" : "2200"
-                }
 # rasgele 7 karakterli bir dize oluştur
-sms = ''.join(random.choices(string.ascii_uppercase + string.digits, k=7))
+letters = string.ascii_uppercase
+print ( ''.join(random.choice(letters) for i in range(7)) )
 
-# Loop through the addressbook dictionary and send each number the message
-for (c,v) in addressbook.items():
-    
-    # SMS Message Template (try to keep to within 150 characters)
-    smsmessage = str("BAGLAN4GB " + sms)
-    
-    # Use Subprocess Run Function to send SMS
-    subprocess.run(["termux-sms-send", "-n", phonenumber, smsmessage])
-    
-    # Print confirmation of each send
-    print("Sent Message to " + k + " via " + v)
+# SMS Message Template (try to keep to within 150 characters)
+smsmessage = ("BAGLAN4GB " + sms)
+
+# Use Subprocess Run Function to send SMS
+subprocess.run(["termux-sms-send", "-n", "2200", smsmessage])
+
+# Print confirmation of each send
+print(""smsmessage" 2200 numarasına yollandı.)
 
 
 # Print end of process message
-print("Message sending complete")
+print("İşlem tamamlandı.")
 
 
 
