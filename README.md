@@ -22,3 +22,5 @@ komutu ile klasöre girip
 python sms.py 
 ```
 komutu ile programı çalıştırın.
+
+Çalışmazsa telefonunuz çift simli ve sim kart ilk slota takılı olduğu içindir.
